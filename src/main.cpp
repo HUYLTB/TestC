@@ -5,6 +5,6 @@
 int main()
 {
 	ShapeFatory ShFatory;
-    ShFatory.saveShapesToFile("data/DataNew.txt", ShFatory.readShapesFromFile("data/data.txt"));
+    ShFatory.saveShapesToFile("assets/DataNew.txt", ShFatory.readShapesFromFile("assets/data.txt"));
     return 0;
 }

@@ -10,7 +10,10 @@ file(GLOB_RECURSE SOURCE_FILES "src/*.h" "src/*.cpp")
 add_executable(${PROJECT_NAME} src/main.cpp ${SOURCE_FILES})
 
 # make assets directory in build
-file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/res)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/assets)
+file(COPY
+       "${CMAKE_CURRENT_SOURCE_DIR}/assets/"
+       DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/assets/)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_11)
 
 
