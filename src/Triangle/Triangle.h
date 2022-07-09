@@ -1,35 +1,34 @@
 #ifndef __TRIANGLE_H__
 #define __TRIANGLE_H__
-
-#pragma once
-//#include"../Point/Point.h"
-#include"../Shape/Shape.cpp"
+#include"../Point/Point.h"
+#include"../Shape/Shape.h"
+#include"../Utils/Utils.h"
 class Triangle:public Shape
 {
 	private: 
 	Point p1,p2,p3;
 	public:
-		virtual float getPerimeter()
+		float getPerimeter() override
         {//tinh chu vi tam giac tu 3 diem
 			float a,b,c;
-			a=distance(p1,p2);
-			b=distance(p1,p3);
-			c=distance(p2,p3);
+			a=p1.distance(p2);
+			b=p1.distance(p3);
+			c=p2.distance(p3);
 			return a+b+c;
 		}
-		virtual float getArea()
+		float getArea() override
         {
 		//dien tich tam giac tu 3 diem
 			float a,b,c,p;
-			a=distance(p1,p2);
-			b=distance(p1,p3);
-			c=distance(p2,p3);
+			a=p1.distance(p2);
+			b=p1.distance(p3);
+			c=p2.distance(p3);
 			p=(a+b+c)/2;
 			p=p*(p-a)*(p-b)*(p-c);
 			return sqrt(p);
 		}
-        virtual Triangle* fromString(const std::string& s);
-	    virtual std::string toString();
+        Triangle* fromString(const std::string& s) override;
+	    std::string toString() override;
 
 };
 #endif // __TRIANGLE_H__

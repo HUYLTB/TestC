@@ -6,19 +6,19 @@ Shape* ShapeFatory::createShape(int type, const std::string& s)
 	switch (type)
 	{
 	case 0:
-		Shapexample = new Triangle;
+		Shapexample = new Triangle();
 		Shapexample->fromString(s);
 		break;
 	case 1:
-		Shapexample = new Rectangle;
+		Shapexample = new Rectangle();
 		Shapexample->fromString(s);
 		break;
 	case 2:
-		Shapexample = new Circle;
+		Shapexample = new Circle();
 		Shapexample->fromString(s);
 		break;
 	case 3:
-		Shapexample = new Ellipse;
+		Shapexample = new Ellipse();
 		Shapexample->fromString(s);
 		break;
 	default:
@@ -39,7 +39,7 @@ std::list<Shape*> ShapeFatory::readShapesFromFile(const std::string& filename)
 		while (std::getline(FileDemo, line))
 		{
 			std::string type = line.substr(0, 1);
-			C.push_back(createShape(chint(type), line.substr(2, line.length() - 2)));
+			C.push_back(createShape(Utils::chint(type), line.substr(2, line.length() - 2)));
 		}
 		FileDemo.close();
 	}
@@ -55,3 +55,4 @@ void ShapeFatory::saveShapesToFile(const std::string& filename, const std::list<
 	}
 	FileDemo.close();
 };
+

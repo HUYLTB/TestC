@@ -1,11 +1,10 @@
 #include <iostream>
-#include"ShapeFatory/ShapeFatory.cpp"
-#include<string.h>
+#include"ShapeFatory/ShapeFatory.h"
+#include<string>
 #include<fstream>
 int main()
 {
 	ShapeFatory ShFatory;
-    std::list<Shape*> listshape = ShFatory.readShapesFromFile("data/data.txt");
-    ShFatory.saveShapesToFile("data/DataNew.txt", listshape);
+    ShFatory.saveShapesToFile("data/DataNew.txt", ShFatory.readShapesFromFile("data/data.txt"));
     return 0;
 }

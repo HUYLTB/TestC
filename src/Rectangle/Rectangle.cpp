@@ -1,4 +1,5 @@
 #include"Rectangle.h"
+
 //#include<iostream>
 //#include<string.h>
 //#include"../Point/Point.h"
@@ -17,18 +18,18 @@ Rectangle* Rectangle::fromString(const std::string& s)
 		switch (i)
 		{
 		case 1:
-			p1.setx(chint(x));
+			p1.setx(Utils::chint(x));
 			break;
 
 		case 2:
-			p1.sety(chint(x));
+			p1.sety(Utils::chint(x));
 			break;
 
 		case 3:
-			width = chint(x);
+			width = Utils::chint(x);
 			break;
 		case 4:
-			 height= chint(x);
+			 height= Utils::chint(x);
 			break;
 		default:
 			break;

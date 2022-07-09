@@ -1,32 +1,35 @@
 #include"Point.h"
+
 Point Point::operator+(Point&p2)
 {
     Point kq;
-    kq.x=this->x+p2.x;
-    kq.y=this->y+p2.y;
+    kq.x=x+p2.x;
+    kq.y=y+p2.y;
     return kq;
 }
 Point Point::operator-(Point&p2)
 {
     Point kq;
-    kq.x=this->x-p2.x;
-    kq.y=this->y-p2.y;
+    kq.x=x-p2.x;
+    kq.y=y-p2.y;
     return kq;
 }
 Point& Point::operator+=(Point& p2)
 {
-    this->x=this->x+p2.x;
-    this->y=this->y+p2.y;
+    x=x+p2.x;
+    y=y+p2.y;
+    return *this;
 }
 Point& Point::operator-=(Point& p2)
 {
-    this->x=x-p2.x;
-    this->y=y-p2.y;
+    x=x-p2.x;
+    y=y-p2.y;
+    return *this;
 }
-float Point::distance(Point &p1,Point &p2)
+float Point::distance(Point &pB)
 {
     float a;
-	return a=sqrt((p1.x-p2.x)*(p1.x-p2.x)+(p1.y-p2.y)*(p1.y-p2.y));
+	return a=sqrt((x-pB.x)*(x-pB.x)+(y-pB.y)*(y-pB.y));
 }
 float Point::dotProduct(Point&p1,Point&p2)
 {

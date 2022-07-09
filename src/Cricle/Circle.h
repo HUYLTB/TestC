@@ -1,9 +1,8 @@
 #ifndef __CIRCLE_H__
 #define __CIRCLE_H__
-
-#pragma once
 #include"../Shape/Shape.h"
-//#include"../Point/Point.h"
+#include"../Point/Point.h"
+#include"../Utils/Utils.h"
 static float pi=3.14;
 class Circle:public Shape
 {
@@ -11,16 +10,16 @@ class Circle:public Shape
 		Point p1;//luu tam
 		float r;//ban kinh
 	public:
-		virtual float getPerimeter()
+		float getPerimeter() override
             {//chu vi hinh tron
 				return (2*pi*r);
 			}
-		virtual float getArea()
+		float getArea() override
             {//dien tich hinh tron
 				return (pi*r*r);
 			}
-        virtual Circle* fromString(const std::string& s);
-	    virtual std::string toString();
+    	Circle* fromString(const std::string& s) override;
+		std::string toString() override;
 
 };
 #endif // __CIRCLE_H__

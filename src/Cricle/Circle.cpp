@@ -1,4 +1,5 @@
 #include"Circle.h"
+
 //#include<string.h>
 Circle* Circle::fromString(const std::string& s)
 {
@@ -14,15 +15,15 @@ Circle* Circle::fromString(const std::string& s)
 		switch (i)
 		{
 		case 1:
-			p1.setx(chint(x));
+			p1.setx(Utils::chint(x));
 			break;
 
 		case 2:
-			p1.sety(chint(x));
+			p1.sety(Utils::chint(x));
 			break;
 
 		case 3:
-			r = chint(x);
+			r = Utils::chint(x);
 			break;
 
 		default:
