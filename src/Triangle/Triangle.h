@@ -2,7 +2,7 @@
 #define __TRIANGLE_H__
 #include"../Point/Point.h"
 #include"../Shape/Shape.h"
-#include"../Utils/Utils.h"
+#include"../ToInteger/ToInteger.h"
 class Triangle:public Shape
 {
 	private: 

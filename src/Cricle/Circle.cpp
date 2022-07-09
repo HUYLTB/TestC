@@ -15,15 +15,15 @@ Circle* Circle::fromString(const std::string& s)
 		switch (i)
 		{
 		case 1:
-			p1.setx(Utils::chint(x));
+			p1.setx(ToInteger::Toint(x));
 			break;
 
 		case 2:
-			p1.sety(Utils::chint(x));
+			p1.sety(ToInteger::Toint(x));
 			break;
 
 		case 3:
-			r = Utils::chint(x);
+			r = ToInteger::Toint(x);
 			break;
 
 		default:

@@ -2,7 +2,7 @@
 #define __CIRCLE_H__
 #include"../Shape/Shape.h"
 #include"../Point/Point.h"
-#include"../Utils/Utils.h"
+#include"../ToInteger/ToInteger.h"
 static float pi=3.14;
 class Circle:public Shape
 {

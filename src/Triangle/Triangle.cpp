@@ -14,22 +14,22 @@ Triangle* Triangle::fromString(const std::string& s)
 		switch (i)
 		{
 		case 1:
-			p1.setx(Utils::chint(x));
+			p1.setx(ToInteger::Toint(x));
 			break;
 		case 2:
-			p1.sety(Utils::chint(x));
+			p1.sety(ToInteger::Toint(x));
 			break;
 		case 3:
-			p2.setx(Utils::chint(x));
+			p2.setx(ToInteger::Toint(x));
 			break;
 		case 4:
-			 p2.sety(Utils::chint(x));
+			 p2.sety(ToInteger::Toint(x));
 			 break;
 		case 5:
-			p3.setx(Utils::chint(x));
+			p3.setx(ToInteger::Toint(x));
 			break;
 		case 6:
-			 p3.sety(Utils::chint(x));
+			 p3.sety(ToInteger::Toint(x));
 			break;
 		default:
 			break;

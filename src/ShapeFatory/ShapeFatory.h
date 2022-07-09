@@ -4,7 +4,7 @@
 #include "../Triangle/Triangle.h"
 #include "../Rectangle/Rectangle.h"
 #include "../Ellips/Ellipse.h"
-#include"../Utils/Utils.h"
+#include"../ToInteger/ToInteger.h"
 #include<list>
 #include<fstream>
 

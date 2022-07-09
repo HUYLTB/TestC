@@ -16,18 +16,18 @@ Ellipse* Ellipse::fromString(const std::string& s)
 		switch (i)
 		{
 		case 1:
-			p1.setx(Utils::chint(x));
+			p1.setx(ToInteger::Toint(x));
 			break;
 
 		case 2:
-			p1.sety(Utils::chint(x));
+			p1.sety(ToInteger::Toint(x));
 			break;
 
 		case 3:
-			x = Utils::chint(x);
+			z = ToInteger::Toint(x);
 			break;
 		case 4:
-			y = Utils::chint(x);
+			y = ToInteger::Toint(x);
 			break;
 		default:
 			break;
@@ -41,6 +41,6 @@ Ellipse* Ellipse::fromString(const std::string& s)
 std::string Ellipse::toString()
 {
 	return "3 " + std::to_string(p1.getx()) + " " + std::to_string(p1.gety()) + " "
-		+ std::to_string(x) + " " + std::to_string(y) + "\tPerimeter: " + 
+		+ std::to_string(z) + " " + std::to_string(y) + "\tPerimeter: " + 
         std::to_string(getPerimeter()) + "\tArea: " + std::to_string(getArea());
 };

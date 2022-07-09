@@ -39,7 +39,7 @@ std::list<Shape*> ShapeFatory::readShapesFromFile(const std::string& filename)
 		while (std::getline(FileDemo, line))
 		{
 			std::string type = line.substr(0, 1);
-			C.push_back(createShape(Utils::chint(type), line.substr(2, line.length() - 2)));
+			C.push_back(createShape(ToInteger::Toint(type), line.substr(2, line.length() - 2)));
 		}
 		FileDemo.close();
 	}
